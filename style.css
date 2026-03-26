@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: rgb(156, 221, 234);
+  background-color: var(--primary);
 }
 .dm-serif-display-regular {
   font-family: "DM Serif Display", serif;
@@ -35,7 +35,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #1a3a3a;
+  color: var(--dark);
   font-size: 1.5rem;
   font-weight: 200;
 }
@@ -53,12 +53,12 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgb(156, 221, 234);
-  border-bottom: 2px solid rgb(231, 49, 186);
+  background-color: var(--primary);
+  border-bottom: 2px solid var(--accent);
 }
 
 header .logo {
-  color: rgb(246, 246, 246);
+  color: var(--secondary);
   font-weight: bold;
   text-decoration: none;
   font-size: 2.5em;
@@ -66,7 +66,7 @@ header .logo {
 }
 
 header .logo span {
-  color: rgb(231, 49, 186);
+  color: var(--accent);
 }
 
 section.banner {
@@ -85,7 +85,7 @@ section.banner {
 section .content {
   max-width: 900px;
   text-align: center;
-  color: white;
+  color: var(--secondary);
 }
 
 .content h2 {
@@ -100,11 +100,11 @@ section .content {
 
 .content .btn {
   font-size: 2em;
-  color: white;
+  color: var(--secondary);
   padding: 10px 30px;
   margin: 20px;
   display: inline-block;
-  background-color: rgb(231, 49, 186);
+  background-color: var(--accent);
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -153,13 +153,13 @@ section.about {
 }
 
 .titleText span {
-  color: rgb(231, 49, 186);
+  color: var(--accent);
   font-weight: 700;
   font-size: 1.5em;
 }
 
 .titleText {
-  color: black;
+  color: var(--text);
   font-size: 2em;
   font-weight: 300;
 }
@@ -185,8 +185,8 @@ section.about {
 }
 
 .menu-content .box {
-  flex: 00 calc(33.333% - 14px);
-  background-color: white;
+  flex: 0 0 calc(33.333% - 14px);
+  background-color: var(--secondary);
   border-radius: 10px;
   overflow: hidden;
   padding-bottom: 1rem;
@@ -207,12 +207,12 @@ section.about {
 
 .menu .btn2 {
   font-size: 2em;
-  color: white;
+  color: var(--secondary);
   padding: 10px 30px;
   margin: 30px auto 0;
   display: block;
   width: fit-content;
-  background-color: rgb(231, 49, 186);
+  background-color: var(--accent);
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -225,7 +225,7 @@ section.about {
 }
 
 .about .imagebox {
-  background-color: rgb(246, 246, 246);
+  background-color: var(--secondary);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -305,12 +305,12 @@ section.about {
 
 .testimonials .text h4 span {
   font-size: 1.2rem;
-  color: rgb(231, 49, 186);
+  color: var(--accent);
 }
 
 .contact {
   padding: 80px;
-  background-color: white;
+  background-color: var(--secondary);
 }
 
 .contact-form {
@@ -327,8 +327,8 @@ section.about {
   margin: 0 auto;
   display: block;
   width: fit-content;
-  background-color: rgb(231, 49, 186);
-  color: white;
+  background-color: var(--accent);
+  color: var(--secondary);
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -355,7 +355,7 @@ section.about {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: rgb(231, 49, 186);
+  border-color: var(--accent);
 }
 
 .contact-info p {
