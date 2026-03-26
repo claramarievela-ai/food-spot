@@ -4,8 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary: rgb(156, 221, 234);
+  --secondary: rgb(246, 246, 246);
+  --accent: rgb(231, 49, 186);
+  --dark: #1a3a3a;
+  --text: black;
+}
+
 body {
-  background-color: rgb(149, 201, 213);
+  background-color: rgb(156, 221, 234);
 }
 .dm-serif-display-regular {
   font-family: "DM Serif Display", serif;
@@ -27,7 +35,9 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(32, 32, 142);
+  color: #1a3a3a;
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
 ul,
@@ -40,10 +50,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 40px 40px;
-}
-
-header .navigation {
-  color: rgb(21, 23, 92);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgb(156, 221, 234);
+  border-bottom: 2px solid rgb(231, 49, 186);
 }
 
 header .logo {
@@ -89,11 +100,20 @@ section .content {
 
 .content .btn {
   font-size: 2em;
+  color: white;
   padding: 10px 30px;
   margin: 20px;
   display: inline-block;
   background-color: rgb(231, 49, 186);
-  border-radius: 8px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.content .btn:hover {
+  background-color: rgb(200, 30, 160);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 section.about {
@@ -113,11 +133,251 @@ section.about {
 .imagebox {
   width: 100%;
   height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .imagebox img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  padding: 10px;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.titleText span {
+  color: rgb(231, 49, 186);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.titleText {
+  color: black;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.menu {
+  padding: 80px;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.menu-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.menu-content .box {
+  flex: 00 calc(33.333% - 14px);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  text-align: center;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.menu-content .text h3 {
+  justify-content: center;
+  font-weight: 200;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.menu .btn2 {
+  font-size: 2em;
+  color: white;
+  padding: 10px 30px;
+  margin: 30px auto 0;
+  display: block;
+  width: fit-content;
+  background-color: rgb(231, 49, 186);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.menu .btn2:hover {
+  background-color: rgb(200, 30, 160);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.about .imagebox {
+  background-color: rgb(246, 246, 246);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about .imagebox img {
+  object-position: 50% 20%;
+}
+
+.expert {
+  padding: 80px;
+}
+
+.expert .menu-content {
+  padding-bottom: 10px;
+}
+
+.expert .imagebox img {
+  object-position: top;
+  object-fit: cover;
+}
+
+.expert .menu-content .box:nth-child(1) .imagebox img {
+  object-position: 50% 20%;
+}
+
+.expert .menu-content .box:nth-child(2) .imagebox img {
+  object-position: 50% 10%;
+}
+
+.expert .menu-content .box:nth-child(3) .imagebox img {
+  object-position: 50% 2%;
+}
+
+.expert .text {
+  padding: 1rem;
+  text-align: center;
+}
+
+.expert .text h2 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.expert .text p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.testimonials {
+  padding: 80px;
+}
+
+.testimonials .imagebox {
+  width: 200px;
+  height: 200px;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  margin: 0 auto;
+}
+
+.testimonials .menu-content .box {
+  overflow: visible !important;
+  padding-top: 2rem;
+}
+
+.testimonials .imagebox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0 !important;
+}
+
+.testimonials .text h4 {
+  font-size: 1.2rem;
+  padding-top: 10px;
+}
+
+.testimonials .text h4 span {
+  font-size: 1.2rem;
+  color: rgb(231, 49, 186);
+}
+
+.contact {
+  padding: 80px;
+  background-color: white;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact .btn3 {
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  padding: 12px 30px;
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+  background-color: rgb(231, 49, 186);
+  color: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact .btn3:hover {
+  background-color: rgb(200, 30, 160);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.contact .row {
+  align-items: flex-start;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 1rem;
+  padding: 15px;
+  border: 1px solid #ddd;
   border-radius: 8px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgb(231, 49, 186);
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.contact-form textarea {
+  height: 300px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 20px;
+  padding: 40px;
+  font-size: 1.2rem;
+}
+
+.contact .title {
+  text-align: center;
+  margin-bottom: 40px;
 }
